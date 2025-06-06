@@ -3,12 +3,12 @@
   "name": "FSSS Progressive Web App",
   "icons": [
     {
-      "src": "logo192x192.png",
+      "src": "img/favicon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512x512.png",
+      "src": "img/favicon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -17,4 +17,5 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000"
+  
 }

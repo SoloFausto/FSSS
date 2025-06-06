@@ -7,49 +7,16 @@
     <title>FSSS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
 </head>
 
 <body>
     <script src="lib/sha3.min.js"></script>
-    <script src="lib/seedrandom.js">
-</script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-                .then(registration => {
-                    console.log('Service Worker registered with scope:', registration.scope);
-                })
-                .catch(error => {
-                    console.error('Service Worker registration failed:', error);
-                });
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var DEFAULT_CHARACTER_SET = "ABCDFGHIJKLMNOPQRSTUVWXYZabdfghijklmnopqrstuvwxyz1234567890";
-
-            var UPDATED_CHARACTER_SET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890*!#$&_@%";
-            var DEFAULT_LENGTH = 32;
-
-            const masterPassword = document.getElementById('masterPassword');
-            const servicePassword = document.getElementById('servicePassword');
-            const result = document.getElementById('result');
-
-            function hash() {
-                let generatedPassword = "";
-                var value1 = masterPassword.value;
-                var value2 = servicePassword.value;
-                var hashValue = sha3_512(value1 + sha3_512(value2));
-                var rng = new Math.seedrandom(hashValue);
-                for (var i = 0; i < DEFAULT_LENGTH; i++) {
-                    generatedPassword += UPDATED_CHARACTER_SET[Math.floor(rng() * UPDATED_CHARACTER_SET.length)];
-                }
-                result.textContent = generatedPassword;
-            }
-
-            masterPassword.addEventListener('keyup', hash);
-            servicePassword.addEventListener('keyup', hash);
-        });
-    </script>
+    <script src="lib/seedrandom.js"></script>
+    <script src="lib/script.js"></script>
     <h1>FSSS</h1>
     <input type="text" id="masterPassword" placeholder="Master Password">
     <br> 
