@@ -8,11 +8,20 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: #f4f4f9;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+body.dark-mode {
+    background-color: black;
+    color: white;
 }
 
 h1 {
     color: #333;
     margin-bottom: 20px;
+    transition: color 0.3s;
+
 }
 
 input[type="text"] {
@@ -27,7 +36,25 @@ input[type="text"] {
 p#result {
     margin-top: 20px;
     font-size: 18px;
-    color: #555;
     word-wrap: break-word;
     text-align: center;
+}
+
+#darkModeSwitch {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+}
+
+body.dark-mode h1 {
+    color: white;
+}
+
+body.dark-mode p {
+    color: white;
 }
