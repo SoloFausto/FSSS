@@ -1,4 +1,22 @@
 {
+  "name": "fsss",
+  "version": "1.0.0",
+  "description": "super quick implementation of PagoruDev's SSS with only bare JS, HTML and CSS",
+  "homepage": "https://github.com/SoloFausto/FSSS#readme",
+  "bugs": {
+    "url": "https://github.com/SoloFausto/FSSS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoloFausto/FSSS.git"
+  },
+  "license": "ISC",
+  "author": "Fausto De Leon",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "express": "^5.1.0"
   }
